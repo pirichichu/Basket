@@ -1,0 +1,80 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Texture2D" path="res://assets/legacy/1783573847911.png" id="1_background"]
+[ext_resource type="Script" path="res://scripts/locker/locker.gd" id="2_script"]
+[ext_resource type="Texture2D" path="res://assets/legacy/IMG-20260710-WA0003.jpg" id="3_back"]
+[ext_resource type="Texture2D" path="res://assets/legacy/sprites/cuerpo.png" id="4_body"]
+
+[node name="locker" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_script")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Fondo" type="TextureRect" parent="CanvasLayer"]
+offset_left = 5.0
+offset_top = -1.0
+offset_right = 1381.0
+offset_bottom = 767.0
+texture = ExtResource("1_background")
+
+[node name="BotonVolver" type="TextureButton" parent="CanvasLayer"]
+offset_right = 488.0
+offset_bottom = 222.0
+texture_normal = ExtResource("3_back")
+
+[node name="Previsualizacion" type="Node2D" parent="CanvasLayer"]
+
+[node name="CuerpoSprite" type="Sprite2D" parent="CanvasLayer/Previsualizacion"]
+position = Vector2(679.99994, 407)
+scale = Vector2(0.43181822, 0.45844686)
+texture = ExtResource("4_body")
+
+[node name="PeloSprite" type="Sprite2D" parent="CanvasLayer/Previsualizacion"]
+position = Vector2(677, 184)
+scale = Vector2(0.23171887, 0.25250003)
+
+[node name="PlayeraSprite" type="Sprite2D" parent="CanvasLayer/Previsualizacion"]
+position = Vector2(681, 333)
+scale = Vector2(0.33800212, 0.36130744)
+
+[node name="ColumnaIzquierda" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 70.0
+offset_top = 280.0
+offset_right = 285.0
+offset_bottom = 405.0
+theme_override_constants/separation = 14
+
+[node name="BtnCategoriaPelo" type="Button" parent="CanvasLayer/ColumnaIzquierda"]
+custom_minimum_size = Vector2(215, 52)
+layout_mode = 2
+text = "Pelo"
+
+[node name="BtnCategoriaPlayera" type="Button" parent="CanvasLayer/ColumnaIzquierda"]
+custom_minimum_size = Vector2(215, 52)
+layout_mode = 2
+text = "Playera"
+
+[node name="ColumnaDerecha" type="VBoxContainer" parent="CanvasLayer"]
+offset_left = 1080.0
+offset_top = 245.0
+offset_right = 1305.0
+offset_bottom = 460.0
+theme_override_constants/separation = 14
+
+[node name="BtnOpcion0" type="Button" parent="CanvasLayer/ColumnaDerecha"]
+custom_minimum_size = Vector2(225, 52)
+layout_mode = 2
+
+[node name="BtnOpcion1" type="Button" parent="CanvasLayer/ColumnaDerecha"]
+custom_minimum_size = Vector2(225, 52)
+layout_mode = 2
+
+[node name="BtnOpcion2" type="Button" parent="CanvasLayer/ColumnaDerecha"]
+custom_minimum_size = Vector2(225, 52)
+layout_mode = 2
