@@ -6,7 +6,7 @@ var cambiando_pantalla := false
 
 
 func _ready() -> void:
-	$TextureButton.pressed.connect(func() -> void: iniciar_viaje("res://scenes/partida/partida.tscn"))
+	$TextureButton.pressed.connect(func() -> void: iniciar_viaje("res://scenes/match/match.tscn"))
 	$BotonLocker.pressed.connect(func() -> void: iniciar_viaje("res://scenes/locker/locker.tscn"))
 	fade.modulate.a = 1.0
 	create_tween().tween_property(fade, "modulate:a", 0.0, 0.25)
